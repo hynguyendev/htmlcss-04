@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primary-color: #000958;
+}
+
 html {
     font-size: 62.5%;
 }
@@ -9,6 +13,12 @@ html {
 body {
     font-size: 1.6rem;
     font-family: "Poppins", sans-serif;
+    background: #fffaf5;
+}
+
+/* Common */
+a {
+    text-decoration: none;
 }
 
 h1,
@@ -26,4 +36,64 @@ select,
 button {
     font-size: inherit;
     font-family: inherit;
+}
+
+.container {
+    width: 1170px;
+    max-width: calc(100% -48px);
+    margin: 0 auto;
+}
+
+.btn {
+    --height: 56px;
+
+    display: inline-block;
+    min-width: 130px;
+    height: var(--height);
+    line-height: var(--height);
+    border: 1px solid rgb(0, 9, 88, 0.7);
+    border-radius: 99px;
+    font-weight: 600;
+    font-size: 1.4rem;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* Header */
+.header {
+    padding: 26px 0;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar__list {
+    display: flex;
+}
+
+.navbar__link,
+.header-action__link {
+    padding: 8px 18px;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1;
+    color: #5e6085;
+}
+
+.navbar__link:hover {
+    color: var(--primary-color);
+    text-shadow: 1px 0 0 currentColor;
+}
+
+.header-action__btn {
+    --height: 50px;
+
+    min-width: 118px;
 }
